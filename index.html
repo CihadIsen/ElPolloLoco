@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pollo Loco</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="imgage/png" href="img/2_character_pepe/1_idle/idle/I-1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="headline">
+        <h1>El Pollo Loco</h1>
+        <div class="landscape-mode-overlay" id="landscapeModeOverlay">
+            <div class="message">
+                <p>Please switch to landscape mode</p>
+            </div>
+        </div>
+        <h2 id="muteMusic"><img src="img/sound.png" onclick="muteSound()"></h2>
+        <div class="start-btn" id="start-btn">
+            <button onclick="init()">Start</button>
+        </div>
+    </div>
+
+    <div class="game-start-screen" id="startscreen"><img src="img/9_intro_outro_screens/start/startscreen_1.png">
+    </div>
+    <div class="gameOver-screen" id="gameOver"><img src="img/9_intro_outro_screens/game_over/oh no you lost!.png">
+        <button onclick="restartGame()" id="restartBtn">¡Play Again!</button>
+    </div>
+    <div class="victory-screen" id="victory-screen"><img src="img/9_intro_outro_screens/game_over/game over!.png">
+        <button class="victory-button" id="victory-btn" onclick="restartGame()">¡Play Again!</button>
+    </div>
+    <canvas id="canvas" width="720px" height="480px">
+
+    </canvas>
+
+    <div class="explanation">
+        <h1>Buttons:</h1>
+        <div class="buttons">
+            <div class="left-half">
+                <h2>Right Arrow : Move Right </h2>
+                <h2>Left Arrow : Move Left </h2>
+            </div>
+            <div class="right-half">
+                <h2>Space : Jump </h2>
+                <h2>D Button : Throw Bottle </h2>
+            </div>
+        </div>
+        <p>Klick on screen for Full Screen</p>
+
+    </div>
+
+    <div class="mobilebtns" id="mobileHUD">
+        <div class="walkingPanel" id="movingLeftRight">
+            <img src="img/mobileBtns/leftArrow.png" alt="leftBtn" id="leftBtn">
+            <img src="img/mobileBtns/rightArrow.png" alt="rightBtn" id="rightBtn">
+        </div>
+        <div class="jumpingThrowingPanel" id="jumpingThrowing">
+            <img src="img/mobileBtns/upArrow.png" alt="jumping" id="jumpBtn">
+            <img src="img/mobileBtns/throwingBtn .jpeg" alt="throwing" id="throwingBtn">
+        </div>
+    </div>
+    
+    <script src="./models/world.class.js" defer></script>
+    <script src="./models/drawable-object.class.js" defer></script>
+    <script src="./models/movable-object.class.js" defer></script>
+    <script src="./models/character.class.js" defer></script>
+    <script src="./models/chicken.class.js" defer></script>
+    <script src="./models/baby-chicken.class.js" defer></script>
+    <script src="./models/all-statusbar-class.js" defer></script>
+    <script src="./models/background-object.class.js" defer></script>
+    <script src="./models/coins-class.js" defer></script>
+    <script src="./models/bottle-class.js" defer></script>
+    <script src="./models/cloud.class.js" defer></script>
+    <script src="./models/endboss.class.js" defer></script>
+    <script src="./models/throwable-object.class.js" defer></script>
+    <script src="./models/keyboard.class.js" defer></script>
+    <script src="./models/level.class.js" defer></script>
+    <script src="./levels/level1.js" defer></script>
+    <script src="js/game.js" defer></script>
+    <script defer>
+    </script>
+</body>
+
+</html>
